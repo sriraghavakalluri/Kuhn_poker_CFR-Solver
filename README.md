@@ -1,1 +1,3 @@
 #  Kuhn_Poker Solver :Counterfactual Regret Minimization (CFR)
+## Project Overview
+An optimized C++ implementation of the CFR algorithm to solve Kuhn Poker. This project demonstrates the application of iterative regret matching to reach a Nash Equilibrium in a zero-sum, imperfect-information game.  It implements Regret Matching, an iterative approach that allows the algorithm to converge toward a Nash Equilibrium. By simulating millions of game states, the solver minimizes "counterfactual regret"—the difference between what the agent could have earned and what it actually earned—to derive an unexploitable strategy.
