@@ -19,7 +19,7 @@ As the recursion unwinds, the "Expected Value" (EV) of each action is passed bac
 
 This " regret" is added to the regretsum. If an action would have performed better than the average, its regret increases, making the algorithm to choose it more often in the future.the Average Strategy calculated by summing all strategies used across all the iterations is guaranteed to converge to a Nash Equilibrium. This is why the code maintains a _strategysum_ array: it captures the stable, long-term equilibrium that survives the fluctuations of the training process.
 
-#Algorithm Implementation
+# Algorithm Implementation
 Node Class represents the **Information set** used to store the data of a node
 **regretsum** array is used to store the cummulative regret of both the actions pass and bet.
 **strategy** array is used to store the current strategy for an action which is obtained by using regretsum stored for that action.
