@@ -10,7 +10,7 @@ Kuhn Poker is a zero-sum game played with a three-card deck (Jack, Queen, King)
 ## Counterfactual Regret Minimization (CFR) Algorithm 
 In a game of imperfect information, we cannot simply look at the "best move", we must look at how our choices across an entire Information Set minimize our vulnerability to an opponent.The algorithm works as a recursive game tree traversal which calculates the expected payoff for player i at that node, assuming the player tried their best to reach that node.At a decision Node the Infoset Contains 'present card' +'betting history' .
 
-The _cfr_ algorithm is a recursive implementation of a Depth-First Search (DFS) through the game tree. It is responsible for **Strategy Convergence** by simulating self-play.
+The _cfr_ algorithm is a recursive implementation of a Depth-First Search (DFS) through the game tree. It is responsible for **Strategy Convergence** by simulating self-play.  
 **Terminal Payoff Calculation**: When the betting sequence ends, it calls getpayoff to determine the utility based on whether the game ended in a fold or a showdown.  
 **Probability Weighting**: The function tracks reach probabilities (p0 and p1). This ensures that the regret updates are properly weighted by the likelihood of reaching a specific node given the players' current strategies.  
 As the recursion unwinds, the "Expected Value" (EV) of each action is passed back up the tree. This allows parent nodes to calculate their own regret by comparing specific action values against the node's average value.  
