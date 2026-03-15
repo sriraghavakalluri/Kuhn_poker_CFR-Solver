@@ -1,1 +1,1 @@
-#                    Kuhn_poker_CFR-Solver
+#  Kuhn_Poker Solver :Counterfactual Regret Minimization (CFR)
